@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+      
+       <div class="clock">
+             <div class="hours">
+            <h1 class="hr"></h1>
+        </div>
+        <div class="mins">
+            <h1 class="mn"></h1>
+        </div>
+        <div class="secs">
+            <h1 class="sc"></h1>
+        </div>
+
+
+
+    </div>
+
+
+
+</center>
+    <script>
+        const hours = document.querySelector(".hr");
+        const min = document.querySelector(".mn");
+        const sec = document.querySelector(".sc");
+
+
+
+        function tiktak() {
+            let day = new Date();
+            let second = day.getSeconds();
+            let minute = day.getMinutes();
+            let hour = day.getHours();
+            
+            hours.innerHTML= hour;
+            min.innerHTML = minute;
+            sec.innerHTML = second;
+
+
+            console.log({
+                second,
+                minute,
+                hour
+            })
+
+        }
+        setInterval(tiktak, 1000);
+
+    </script>
+</body>
+
+</html>
